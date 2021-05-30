@@ -12,7 +12,7 @@ echo
 
 checkstickybit=$(df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type d \( -perm -002 -a ! -perm -1000 \) 2>/dev/null)
 
-if [ -n "$checkstickbit" ]; then
+if [ -n "$checkstickybit" ]; then
   echo "Non-Compliance?: Yes"
   echo "Details: See below"
   echo
