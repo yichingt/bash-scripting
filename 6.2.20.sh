@@ -10,7 +10,9 @@ echo
 echo "This will take a while, please wait a moment..."
 echo
 
-checkexit=$(grep -E -v '^(halt|sync|shutdown)' /etc/passwd | awk -F: '($7 != "'"$(which nologin)"'" && $7 != "/bin/false") { print $1 " " $6 }')
+checkexit=$(grep -E -v '^(halt|sync|shutdown)' /etc/passwd | awk -F: '($7 != "/sbin/nologin" && $7 != "/bin/false") { print $1 " " $6 }')
+
+#/sbin/nologin can be changed to cater to the system. shadow file or passwd file 
 
 if [ -n "$checkexit" ]; then
   echo "Non-Compliance?: Yes"
