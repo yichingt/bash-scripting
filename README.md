@@ -1,9 +1,9 @@
-# itsma-audit-script
+# Read Me!
 A place to keep the audit codes for ITSMA module
 
 The audit is based on CIS CentOS Linux 8 Benchmark
 
-Audit automation script assigned to me is:
+Audit automation script worked on are:
 <ul>
   <li>1.1.21 Ensure sticky bit is set on all world-writable directories</li>
   <li>1.1.22 Disable Automounting</li>
